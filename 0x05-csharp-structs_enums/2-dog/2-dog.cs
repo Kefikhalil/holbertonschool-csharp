@@ -18,4 +18,4 @@ public struct Dog {
         this.owner = owner;
         this.rating = rating;
     }
-
+}
