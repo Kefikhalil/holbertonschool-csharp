@@ -1,6 +1,7 @@
-enum Rating
-{
-    Good, Great, Excellent
+public enum Rating {
+    Good,
+    Great,
+    Excellent
 }
 public struct Dog {
     public string name;
