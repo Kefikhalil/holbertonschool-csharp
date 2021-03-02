@@ -12,4 +12,4 @@ class Program
 		Console.WriteLine("Last 2 letters: {0}", word_last_2);
 		Console.WriteLine("Middle word: {0}", middle_word);
         }
-
+}
