@@ -6,13 +6,15 @@ namespace Enemies
     public class Zombie
     {
         ///<summary> Represent the zombie health </summary>
-	public int health;
-	///<summary> Represent the zombie constructor </summary>
+	private int health;
+	///<summary> Name of a zombie ///</summary>
+        private string name = "(No name)";
+	///<summary> Represent the zombie constructor ///</summary>
         public Zombie()
         {
             health = 0;
         }
-            ///<summary> New instance of a zombie </summary>
+            ///<summary> New instance of a zombie ///</summary>
         public Zombie (int value)
         {
             if (value < 0)
