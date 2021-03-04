@@ -2,7 +2,7 @@ using System;
 
 namespace Enemies
 {
-    ///<summary> Represents a class of Zombie ///</summary>
+    ///<summary> Represents a zombie class  ///</summary>
     public class Zombie
     {
         
