@@ -26,10 +26,10 @@ namespace Enemies
             return (health);
         }
 	        ///<summary>Retrieve or sets the name </summary>
-        public string Name
-        {
-            get {return (name);}
-            set {name = value;}
+        public string Name 
+	{
+            get => this.name;
+            set => this.name = value;
         }
     }
 }
