@@ -12,7 +12,6 @@ namespace Enemies
         {
             health = 0;
         }
-    }
             ///<summary> New instance of a zombie </summary>
         public Zombie (int value)
         {
@@ -21,4 +20,5 @@ namespace Enemies
             else
                 health = value;
         }
+    }
 }
