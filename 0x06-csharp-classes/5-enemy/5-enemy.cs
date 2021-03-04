@@ -1,4 +1,4 @@
-iusing System;
+using System;
 
 namespace Enemies
 {
@@ -6,13 +6,15 @@ namespace Enemies
     public class Zombie
     {
         ///<summary> Represent the zombie health </summary>
-	public int health;
-	///<summary> Represent the zombie constructor </summary>
+	private int health;
+	///<summary> Name of a zombie ///</summary>
+        private string name = "(No name)";
+	///<summary> Represent the zombie constructor ///</summary>
         public Zombie()
         {
             health = 0;
         }
-            ///<summary> New instance of a zombie </summary>
+            ///<summary> New instance of a zombie ///</summary>
         public Zombie (int value)
         {
             if (value < 0)
@@ -26,12 +28,19 @@ namespace Enemies
             return (health);
         }
 	        ///<summary>Retrieve or sets the name </summary>
-        public string Name
+                        
+	public string Name
         {
-            get {return (name);}
-            set {name = value;}
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
         }
-	        ///<summary> override that prints the Zombie object’s attributes to stdout </summary>
+	        ///<summary> Override that prints the Zombie object’s attributes to stdout </summary>
         public override string ToString()
         {
             return String.Format("Zombie Name: {0} / Total Health: {1}", name, health);
