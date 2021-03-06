@@ -72,3 +72,4 @@ class Square : Rectangle
         return String.Format("[Square] {0} / {1}", size, size);
     }
 }
+}
