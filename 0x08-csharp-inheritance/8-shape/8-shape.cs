@@ -57,21 +57,20 @@ class Square : Rectangle
 /// </summary>
 class Square : Rectangle
 {
-    private int size;
     ///<summary> Gets or sets size</summary>
-    public int Size
-    {
-        get {return (size);}
-        set
-        {
+    private int size;
+    public int Size {
+        get => this.size;
+        set {
             if (value < 0)
-                throw new System.ArgumentException("Size must be greater than or equal to 0");
+            {
+                throw new ArgumentException("Size must be greater than or equal to 0");
+            }
             else
             {
-                size = value;
-                Width = value;
-                Height = value;
+                this.size = value;
             }
+
         }
     }
 }
