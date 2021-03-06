@@ -52,11 +52,6 @@ using System;
 /// <summary> Square class  inhertis from Rectangle </summary>
 class Square : Rectangle
 {
-/// <summary>
-/// Class Sqaure inhertis from Rectangle
-/// </summary>
-class Square : Rectangle
-{
     ///<summary> Gets or sets size</summary>
     private int size;
     public int Size {
