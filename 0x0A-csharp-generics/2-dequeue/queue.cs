@@ -17,9 +17,9 @@ class Queue<T>
 		private T value;
 		public Node next = null;
 
-		public Node(T q)
+		public Node(T stri)
 		{
-			value = q;
+			value = stri;
 
 		}
 	}
