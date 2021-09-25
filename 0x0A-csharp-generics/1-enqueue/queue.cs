@@ -19,7 +19,7 @@ class Queue<T>
 
 		public Node(T q)
 		{
-			value = q
+			value = q;
 
 		}
 	}
