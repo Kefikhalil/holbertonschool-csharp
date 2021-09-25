@@ -1,34 +1,29 @@
 using System;
-
-///<summary>Class for que opperations</summary>
-/// <typeparam name="T">param type</typeparam>
+///<summary>Queue Class </summary>
 class Queue<T>
 {
-    ///<summary>Check if its a queue type</summary>
-	///<return>returns a Queue type</return>
+	public int count;
+	public Node head;
+	public Node tail;
+
+///<summary>Checks if its a queue type </summary>
+
 	public Type CheckType()
 	{
 		return typeof(T);
 	}
-	
-    
-     /// <summary>Class Node inside queue class</summary>
 	public class Node
 	{
-		public T value;
+		private T value;
 		public Node next = null;
 
-		public Node(T stri)
+		public Node(T q)
 		{
-			value = stri;
+			value = q;
+
 		}
 	}
-
-	public Node head;
-	public Node tail;
-	public int count;
-
-	///<summary>Add new node at the end</summary>
+	///<summary>ENqueue</summary>
 	public void Enqueue(T value)
 	{
 		Node newnode = new Node(value);
@@ -45,35 +40,11 @@ class Queue<T>
 		count++;
 	}
 
-
-
-
-	///<summary>Add new node at the end</summary>
+	///<summary> count </summary>
 	public int Count()
 	{
 		return count;
 	}
-
-
-  ///<summary>Add deleting the last node</summary>
-	public T Dequeue()
-	{
-		if (head == null)
-		{
-			Console.WriteLine("Queue is empty");
-			return default(T);
-		}
-		else
-		{
-			tail.value = head.value;
-			head = head.next;
-			count--;
-			return tail.value;
-		}
-	}
-
-
-
 
   ///<summary>delete the last node</summary>
 	public T Dequeue()
