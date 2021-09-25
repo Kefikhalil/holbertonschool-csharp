@@ -17,9 +17,10 @@ class Queue<T>
 		private T value;
 		public Node next = null;
 
-		public Node(T string)
+		public Node(T q)
 		{
-			value = string;
+			value = q
+
 		}
 	}
 	///<summary>ENqueue</summary>
