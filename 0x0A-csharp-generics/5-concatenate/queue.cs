@@ -89,7 +89,7 @@ class Queue<T>
             while(tail != null)
             {
 			    Console.WriteLine(tail.value);
-                tail = tail.next;
+         	       tail = tail.next;
             }
 		}
 	}
@@ -99,12 +99,12 @@ class Queue<T>
         if (head == null)
         {
             Console.WriteLine("Queue is empty");
-            return (null);
+            return null;
         }
         if (typeof(T) != typeof(string) && typeof(T) != typeof(char))
         {
             Console.WriteLine("Concatenate() is for a queue of Strings or Chars only.");
-            return (null);
+            return null;
         }
         string s = "";
         Node h = head;
@@ -112,9 +112,9 @@ class Queue<T>
         {
             s = s + h.value.ToString();
             if (h != tail && typeof(T) == typeof(string))
-                s += " ";
+                s += h.value;
             h = h.next;
         }
         return (s);
+	}
 }
-
