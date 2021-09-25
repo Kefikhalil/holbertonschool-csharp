@@ -72,4 +72,24 @@ class Queue<T>
 		}
 	}
 
+
+
+
+  ///<summary>delete the last node</summary>
+	public T Dequeue()
+	{
+		if (head == null)
+		{
+			Console.WriteLine("Queue is empty");
+			return default(T);
+		}
+		else
+		{
+			tail.value = head.value;
+			head = head.next;
+			count--;
+			return tail.value;
+		}
+	}
+
 }
