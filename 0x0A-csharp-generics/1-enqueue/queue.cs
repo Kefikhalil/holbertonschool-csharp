@@ -14,7 +14,7 @@ class Queue<T>
 	}
 	public class Node
 	{
-		private T value;
+		public T value;
 		public Node next = null;
 
 		public Node(T q)
