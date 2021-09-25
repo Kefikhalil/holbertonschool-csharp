@@ -14,12 +14,12 @@ class Queue<T>
 	}
 	public class Node
 	{
-		private T value;
+		public T value;
 		public Node next = null;
 
-		public Node(T stri)
+		public Node(T q)
 		{
-			value = stri;
+			value = q;
 
 		}
 	}
