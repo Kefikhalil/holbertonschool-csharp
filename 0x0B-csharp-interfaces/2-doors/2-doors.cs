@@ -44,19 +44,16 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
 
     }
 }
-/// <summary>ICollectable interface</summary>
-public interface ICollectable{
-    bool isCollected {get;set;}
-    /// <summary>collect</summary>
-    void Collect();  
-}
-/// <summary> Door class </summary>
-public class Door : Base, IInteractive{
-    public Door(string Name="Door"){
-        this.name = Name;
+class Door : Base, IInteractive
+{
+
+    public Door(string nm = "Door")
+    {
+        name = nm;
     }
-     /// <summary>interactions</summary>
-    public void Interact(){
+
+    public void Interact()
+    {
         Console.WriteLine($"You try to open the {name}. It's locked.");
     }
 }
