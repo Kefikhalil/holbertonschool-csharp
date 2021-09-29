@@ -44,6 +44,12 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
 
     }
 }
+/// <summary>ICollectable interface</summary>
+public interface ICollectable{
+    bool isCollected {get;set;}
+    /// <summary>collect</summary>
+    void Collect();  
+}
 /// <summary> Door class </summary>
 public class Door : Base, IInteractive{
     public Door(string Name="Door"){
