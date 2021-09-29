@@ -20,12 +20,13 @@ interface IBreakable
     void Break();
 }
 
+/// <summary> ICollectable interface</summary>
 interface ICollectable
 {
     bool isCollected {get; set;}
     void Collect();
 }
-
+/// <summary>test</summary>
 class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
     public int durability {get; set;}
