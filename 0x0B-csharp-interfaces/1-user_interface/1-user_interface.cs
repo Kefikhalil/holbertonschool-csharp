@@ -16,16 +16,14 @@ public interface IInteractive{
 /// <summary>IBreakable</summary>
 public interface IBreakable{
     /// <summary>Used for item durability</summary>
-    /// <value>Get and set</value>
-    int durability { get; set; }
+    int durability {get; set;}
     /// <summary>Used to break an item</summary>
     void Break();
 }
 /// <summary>ICollectable interface</summary>
 public interface ICollectable{
     /// <summary>Used to check if collected or not</summary>
-    /// <value>Getter and setter</value>
-    bool isCollected { get; set; }
+    bool isCollected {get; set;}
     /// <summary>Used to collect something</summary>
     void Collect();
 }
@@ -33,22 +31,17 @@ public interface ICollectable{
 public class TestObject : Base, IInteractive, IBreakable, ICollectable{
 
     /// <summary>Used for item durability</summary>
-    /// <value>Getter and setter</value>
     public int durability {get; set;}
     /// <summary>Used for collection</summary>
-    /// <value></value>
     public bool isCollected {get; set;}
     /// <summary>Used for interaction</summary>
     public void Interact(){
-        // Method implementation
     }
     /// <summary>Used to break item</summary>
     public void Break(){
-        // Method implementation
     }
 
     /// <summary>Used to collect something</summary>
     public void Collect(){
-        // Method implementation
     }
 }
