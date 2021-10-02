@@ -125,31 +125,31 @@ public class RoomObjects{
     public static void IterateAction(List<Base> roomObjects, Type type)
     {
         
-        foreach (Base objct in roomObjects)
+        foreach (Base objects in roomObjects)
         {
 
         if (type == typeof(IInteractive))
         {
-            if (cls is IInteractive)
+            if (objects is IInteractive)
             {
-                IInteractive classou = (IInteractive)cls;
-                classou.Interact();
+                IInteractive ii = (IInteractive)objects;
+                ii.Interact();
             }
         }
         else if (type == typeof(IBreakable))
         {
-            if (cls is IBreakable)
+            if (objects is IBreakable)
             {
-                IBreakable classou = (IBreakable)cls;
-                classou.Break();
+                IBreakable ii = (IBreakable)objects;
+                ii.Break();
             }
         }
         else if (type == typeof(ICollectable))
         {
-            if (cls is ICollectable)
+            if (objects is ICollectable)
             {
-                ICollectable classou = (ICollectable)cls;
-                classou.Collect();
+                ICollectable ii = (ICollectable)objects;
+                ii.Collect();
             }
 }
     }
