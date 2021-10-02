@@ -47,10 +47,10 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
 class Door : Base, IInteractive
 {
 
-    public Door(string nm = "Door")
+    public Door(string name = "Door")
     {
-        name = nm;
-    }
+	this.name = Name;
+}
 
     public void Interact()
     {
