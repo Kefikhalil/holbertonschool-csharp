@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 /// <summary>base class </summary>
 abstract class Base{
@@ -119,38 +120,19 @@ class Key : Base, ICollectable
 	}
     }
 }
- /// <summary>Room objects class</summary>
-public class RoomObjects{
+ /// <summary>class RoomObjects</summary>
+public class RoomObjects
 {
     public static void IterateAction(List<Base> roomObjects, Type type)
-    {
-        
-        foreach (Base objects in roomObjects)
-        {
-
-        if (type == typeof(IInteractive))
-        {
-            if (objects is IInteractive)
-            {
-                IInteractive ii = (IInteractive)objects;
-                ii.Interact();
-            }
+{
+        foreach (Base cat in roomObjects)
+{
+            if (type == typeof(ICollectable) && objct is ICollectable)
+((ICollectable)objct).Collect();
+            if (type == typeof(IBreakable) && objct is IBreakable)
+((IBreakable)objct).Break();
+            if (type == typeof(IInteractive) && objct is IInteractive)
+((IInteractive)objct).Interact();
         }
-        else if (type == typeof(IBreakable))
-        {
-            if (objects is IBreakable)
-            {
-                IBreakable ii = (IBreakable)objects;
-                ii.Break();
-            }
-        }
-        else if (type == typeof(ICollectable))
-        {
-            if (objects is ICollectable)
-            {
-                ICollectable ii = (ICollectable)objects;
-                ii.Collect();
-            }
-}
     }
 }
