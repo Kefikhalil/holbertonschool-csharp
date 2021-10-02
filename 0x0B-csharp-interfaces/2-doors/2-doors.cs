@@ -47,9 +47,9 @@ class TestObject : Base, IInteractive, IBreakable, ICollectable
 class Door : Base, IInteractive
 {
 
-    public Door(string name = "Door")
+    public Door(string Name = "Door")
     {
-	name = name;
+	name = Name;
 }
 
     public void Interact()
