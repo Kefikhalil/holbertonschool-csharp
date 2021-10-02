@@ -120,13 +120,13 @@ class Key : Base, ICollectable
     }
 }
  /// <summary>Room objects class</summary>
-
-class RoomObjects
+public class RoomObjects{
 {
     public static void IterateAction(List<Base> roomObjects, Type type)
-{        
-foreach (Base objct in roomObjects)
-{
+    {
+        
+        foreach (Base objct in roomObjects)
+        {
             if (type == typeof(IInteractive) && objct is IInteractive)
                 ((IInteractive)objct).Interact();
             if (type == typeof(IBreakable) && objct is IBreakable)
