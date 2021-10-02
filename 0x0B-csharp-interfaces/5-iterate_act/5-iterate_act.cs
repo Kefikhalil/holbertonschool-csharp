@@ -124,31 +124,14 @@ class Key : Base, ICollectable
 public class RoomObjects {
 public static void IterateAction(List<Base> roomObjects, Type type)
 {
-    foreach (var cat in roomObjects)
-    {
-        if (type == typeof(IInteractive))
+        foreach (Base objct in roomObjects)
         {
-            if (cat is IInteractive)
-            {
-                IInteractive i = (IInteractive)cat;
-                i.Interact();
-            }
-        }
-        else if (type == typeof(IBreakable))
-        {
-            if (cat is IBreakable)
-            {
-                IBreakable i = (IBreakable)cat;
-                i.Break();
-            }
-        }
-        else if (type == typeof(ICollectable))
-        {
-            if (cat is ICollectable)
-            {
-                ICollectable i = (ICollectable)cat;
-                i.Collect();
-            }
+            if (type == typeof(IInteractive) && objct is IInteractive)
+                ((IInteractive)objct).Interact();
+            if (type == typeof(IBreakable) && objct is IBreakable)
+                ((IBreakable)objct).Break();
+            if (type == typeof(ICollectable) && objct is ICollectable)
+                ((ICollectable)objct).Collect();
         }
     }
 }
