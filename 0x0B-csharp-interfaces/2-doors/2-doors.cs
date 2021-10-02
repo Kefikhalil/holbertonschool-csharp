@@ -48,7 +48,9 @@ class Door : Base, IInteractive
 {
 
     public Door(string name = "Door")
-    {}
+    {
+	name = name;
+}
 
     public void Interact()
     {
