@@ -13,10 +13,10 @@ public class Player
     ///<summary>Player Constructor</summary>
     public Player(string name = "Player", float maxHp = 100f)
     {
-        if (maxHp <= 0f)
+        if (maxHp <= 0)
         {
             Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
-            this.maxHp = 100f;
+            this.maxHp = 100;
         }
         else
         this.maxHp = maxHp;
@@ -34,11 +34,11 @@ public class Player
     ///<summary>Damage script</summary>
     public void TakeDamage(float damage)
     {
-        if (damage <= 0)
-	   damage = 0;
-		float newHp = this.hp - damage;
-	 Console.WriteLine($"{this.name} takes {damage} damage!");
-    }
+        Console.WriteLine($"{this.name} takes {damage} damage!");
+        if (damage < 0)
+            damage = 0;
+        float newHp = this.hp - damage;
+}
 
     ///<summary>healing script</summary>
     public void HealDamage(float heal)
