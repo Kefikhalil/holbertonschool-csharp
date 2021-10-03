@@ -35,13 +35,12 @@ public class Player
     public void TakeDamage(float damage)
     {
         if (damage <= 0)
+	   damage = 0;
         {
             Console.WriteLine($"{name} takes 0 damage!");
             return;
         }
-        Console.WriteLine($"{name} takes {damage} damage!");
-        this.ValidateHP(this.hp - damage);
-}
+    }
 
     ///<summary>healing script</summary>
     public void HealDamage(float heal)
