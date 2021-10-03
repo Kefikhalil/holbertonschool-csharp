@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 ///<summary>Player class</summary>
 public class Player
@@ -29,21 +30,21 @@ public class Player
     {
         Console.WriteLine($"{this.name} has {this.hp} / {this.maxHp} health");
     }
-
     ///<summary>Damage script</summary>
     public void TakeDamage(float damage)
     {
-        Console.WriteLine($"{this.name} takes {damage} damage!");
-        if (damage < 0f)
-            damage = 0f;
+        if (damage < 0)
+            damage = 0;
         float newHp = this.hp - damage;
-}
+	Console.WriteLine($"{this.name} takes {damage} damage!");
+    }
 
-    ///<summary>healing script</summary>
+    ///<summary>Healing script</summary>
     public void HealDamage(float heal)
     {
-        Console.WriteLine($"{this.name} heals {heal} HP!");
-        if (heal < 0f)
+        if (heal < 0)
+            heal = 0;
         float newHp = this.hp + heal;
-    }
+	Console.WriteLine($"{this.name} heals {heal} HP!");
+}
 }
