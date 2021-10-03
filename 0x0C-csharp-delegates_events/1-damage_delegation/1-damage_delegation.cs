@@ -29,7 +29,6 @@ public class Player
     {
         Console.WriteLine($"{this.name} has {this.hp} / {this.maxHp} health");
     }
-}
 
     ///<summary>Damage script</summary>
     public void TakeDamage(float damage)
