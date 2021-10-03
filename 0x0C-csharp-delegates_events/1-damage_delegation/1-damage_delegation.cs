@@ -36,17 +36,15 @@ public class Player
     {
         if (damage <= 0)
 	   damage = 0;
-        {
-            Console.WriteLine($"{name} takes 0 damage!");
-            return;
-        }
+	 Console.WriteLine($"{this.name} takes {damage} damage!");
+	 float newHp = this.hp - damage;
     }
 
     ///<summary>healing script</summary>
     public void HealDamage(float heal)
     {
         Console.WriteLine($"{this.name} heals {heal} HP!");
-        if (heal < 0f)
+        if (heal < 0)
         float newHp = this.hp + heal;
     }
 }
