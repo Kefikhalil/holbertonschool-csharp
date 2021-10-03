@@ -36,9 +36,7 @@ public class Player
     {
         if (damage <= 0)
 	   damage = 0;
-	{
 		float newHp = this.hp - damage;
-	}
 	 Console.WriteLine($"{this.name} takes {damage} damage!");
     }
 
