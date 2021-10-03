@@ -3,11 +3,11 @@ using System;
 public enum Modifier
 {
     ///<summary>Weak modifier</summary>
-    Weak,
+    Weak =1,
     ///<summary>Base modifier</summary>
-    Base,
+    Base =2,
     ///<summary>Strong modifier</summary>
-    Strong
+    Strong =3
 }
 public delegate void CalculateHealth(float amount);
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
@@ -71,11 +71,6 @@ public class Player
 }
     public float ApplyModifier(float baseValue, Modifier modifier)
     {
-        if (modifier == Modifier.Weak)
-            return baseValue * 0.5f;
-        else if (modifier == Modifier.Base)
-            return baseValue;
-        else
-            return baseValue * 1.5f;
+        return (baseValue * ((float)modifier / 2f));
 }
 }
