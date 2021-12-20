@@ -1,4 +1,3 @@
-
 using System;
 ///<summary>Queue Class </summary>
 class Queue<T>
@@ -89,32 +88,51 @@ class Queue<T>
             while(tail != null)
             {
 			    Console.WriteLine(tail.value);
-         	       tail = tail.next;
+                tail = tail.next;
             }
 		}
 	}
-	///<summary> concatenates all values in the queue only if the queue is of type String or Char</summary>
-    public string Concatenate()
-    {
-        if (head == null)
-        {
-            Console.WriteLine("Queue is empty");
+
+	public string Concatenate() 
+	{
+		if (head == null)
+		{
+			Console.WriteLine("Queue is empty");
             return null;
-        }
-        if (typeof(T) != typeof(string) && typeof(T) != typeof(char))
-        {
-            Console.WriteLine("Concatenate() is for a queue of Strings or Chars only.");
-            return null;
-        }
-        string s = "";
-        Node h = head;
-        while (h != null)
-        {
-            s = s + h.value.ToString();
-            if (h != tail && typeof(T) == typeof(string))
-                s += h.value;
-            h = h.next;
-        }
-        return (s);
+		}
+        else if (typeof(T) != typeof(string) && typeof(T) != typeof(char))
+            {
+                Console.WriteLine("Concatenate() is for a queue of Strings or Chars only");
+                return null;
+            }
+
+		else
+		{
+            int j = 0;
+            string i = "";
+            tail = head;
+            if (typeof(T) == typeof(char))
+            {
+                while(tail != null)
+                {
+			        i += tail.value;
+                    tail = tail.next;
+                }
+            }
+            
+            else if (typeof(T) == typeof(string))
+			{
+				while (tail != null)
+				{
+                    if(j != 0)
+                        i += " ";    
+					i += tail.value;
+					tail = tail.next;
+                    j++;
+				}
+			}
+            return i;
+		}
 	}
+
 }
