@@ -59,6 +59,23 @@ public class Player
         else
             this.hp = newHp;
 }
+    public float ApplyModifier(float baseValue, Modifier modifier)
+    {
+        float modifiedVal = baseValue;
+        switch (modifier)
+        {
+            case Modifier.Weak:
+                modifiedVal = baseValue * 0.5f;
+                break;
+            case Modifier.Base:
+                modifiedVal = baseValue * 1f;
+                break;
+            case Modifier.Strong:
+                modifiedVal = baseValue * 1.5f;
+                break;
+        }
+        return modifiedVal;
+    }
 }
 /// <summary> Modifier</summary>
 enum Modifier
