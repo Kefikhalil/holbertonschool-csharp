@@ -1,17 +1,6 @@
 using System;
 using System.Collections.Generic;
 
-/// <summary> Modifier</summary>
-public enum Modifier
-{
-    Weak,
-    Base,
-    strong
-}
-
-public delegate void CalculateHealth(float amount);
-delegate float CalculateModifier(float baseValue, Modifier modifier);
-
 ///<summary>Player class</summary>
 public class Player
 {
@@ -70,13 +59,17 @@ public class Player
         else
             this.hp = newHp;
 }
-    public float ApplyModifier(float baseValue, Modifier modifier)
-    {
-        if (modifier == Modifier.Weak)
-            return baseValue * 0.5f;
-        else if (modifier == Modifier.Base)
-            return baseValue;
-        else
-            return baseValue * 1.5f;
 }
+/// <summary> Modifier</summary>
+enum Modifier
+{
+    Weak,
+    Base,
+    Strong
 }
+
+
+/// <summary>Determines the strength of attack modifer. </summary>
+/// <param name="baseValue">Normal attack.</param>
+/// <param name="modifier">Modifier to apply to baseValue.</param>
+delegate float CalculateModifier(float baseValue, Modifier modifier);
